@@ -16,14 +16,18 @@ while True:
          break
     else:         
         if pessoas[contador][1] > maiorPeso:
+            maiorPeso = pessoas[contador][1]
+            pesMaior.clear()
             if menorPeso == 0:
                 menorPeso = pessoas[contador][1]
                 pesMenor.append(pessoas[contador][0])
-            maiorPeso = pessoas[contador][1]
-            pesMaior.clear()
             pesMaior.append(pessoas[contador][0]) 
         elif pessoas[contador][1] == maiorPeso:
             pesMaior.append(pessoas[contador][0])
+            if pessoas[contador][1] == menorPeso:
+                pesMenor.append(pessoas[contador][0])
+        elif pessoas[contador][1] == menorPeso:
+            pesMenor.append(pessoas[contador][0])
         elif pessoas[contador][1] < menorPeso:
             menorPeso = pessoas[contador][1]
             pesMenor.clear()
