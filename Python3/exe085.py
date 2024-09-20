@@ -14,9 +14,15 @@ for e in range(1,8):
     else:
         numeros[1].append(numero)
 
-for p,i in enumerate(numeros):
-    alinhado = i.sort()
-    if p ==0:
-        print(f'Os números pares são:{[i]}')
-    else:
-        print(f'Os números impares são:{[i]}')
+numeros[0].sort()
+numeros[1].sort()
+print(f'Os números pares são: {numeros[0]}')
+print(f'Os números impares são: {numeros[1]}')
+
+#Alternativa para classificar
+# for p,i in enumerate(numeros):
+#     alinhado = i.sort()
+#     if p ==0:
+#         print(f'Os números pares são:{[i]}')
+#     else:
+#         print(f'Os números impares são:{[i]}')
