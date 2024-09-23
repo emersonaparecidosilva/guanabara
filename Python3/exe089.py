@@ -27,17 +27,14 @@ while True:
     break
 
 print(('==*==')*20)
-titulo = 'No. NOME'
-titulo1 = 'MÉDIA'
-print(f'{titulo:.<30}',end = '')
-print(f'{titulo1:.>8}')
+print(f'{"No.":<4}{"NOME":<20}{"MÉDIA":>8}')
 for p,i in enumerate(alunosResumo[0]):
     if p % 2 == 0:      
-        print(f'{[p]} {i[0]:.<30}', end ='')
-        print(f'{i[1]}')
+        print(f'{p:<4} {i[0]:.<20}', end ='')
+        print(f'{i[1]:8.1f}')
     else:
-        print(f'{[p]} {i[0]:.<30}', end ='')
-        print(f'{i[1]}')
+        print(f'{p:<4} {i[0]:.<20}', end ='')
+        print(f'{i[1]:8.1f}')
 print(('==*==')*20)
 print()
 while True:
