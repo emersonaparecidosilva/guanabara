@@ -4,32 +4,50 @@ print(('==*==')*20)
 print('Bem vindo(a) - Boletim com listas compostas')
 print(('==*==')*20)
 
-alunos = []
+alunos = alunosResumo = []
+contador = 0
 while True:
     alunosTemp = []
+    resumoTemp = []
     while True:
         nome = input('Nome: ')
         nota1 = float(input('Nota 1: '))
         nota2 = float(input('Nota 2: '))
         alunoMedia = (nota1+nota2)/2
+        contador += 1
         alunosTemp.append([nome,nota1,nota2,alunoMedia])
+        resumoTemp.append([nome,alunoMedia])
         continuar = input('Deseja continuar? [S/N]: ').strip().upper()
         while continuar not in 'SN':
             continuar = input('Deseja continuar? [S/N]: ').strip().upper()
         if continuar == 'N':
             break
     alunos.append(alunosTemp)
+    alunosResumo.append(resumoTemp)
     break
-for p,i in enumerate(alunos):
-    print(f'No {[p+1]}: Nome: {alunos[0][p][0]} Média: {alunos[0][p][3]:.2f}')
 
-
-print(('====')*15)
-print(f'{'LISTAGEM DE PREÇOS':^40}')
-print(('====')*15)
-
-for pos in range(0,len(listagem)):
-    if pos % 2 == 0:
-        print(f'{listagem[pos]:.<30}',end='')
+print(('==*==')*20)
+titulo = 'No. NOME'
+titulo1 = 'MÉDIA'
+print(f'{titulo:.<30}',end = '')
+print(f'{titulo1:.>8}')
+for p,i in enumerate(alunosResumo[0]):
+    if p % 2 == 0:      
+        print(f'{[p]} {i[0]:.<30}', end ='')
+        print(f'{i[1]}')
     else:
-        print(f'R${listagem[pos]:>7.2f}')
+        print(f'{[p]} {i[0]:.<30}', end ='')
+        print(f'{i[1]}')
+print(('==*==')*20)
+print()
+while True:
+    mostrarNotas = int(input('Mostrar notas de qual aluno? (999 interrompe) '))
+    if mostrarNotas != 999:
+        if mostrarNotas < contador:
+            print()
+            print(f'As notas de {alunos[0][mostrarNotas][0]} São: {alunos[0][mostrarNotas][1]},{alunos[0][mostrarNotas][2]}')
+            print()
+        else:
+            print('Opção Inválida!')            
+    else:
+        break
