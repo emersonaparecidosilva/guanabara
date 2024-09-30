@@ -1,4 +1,4 @@
-#exercicio 105 - Tema XYZ
+#Exercício Python #105 - Analisando e gerando Dicionários -> https://www.youtube.com/watch?v=Kbs97l38vVQ&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH&index=40
 
 print(('==*==')*20)
 print('Bem vindo(a) - Exercício Python #105 - Analisando e gerando Dicionários')
