@@ -21,10 +21,10 @@ cores = ('\033[m',          #0 - Sem Cores
          )
 
 def título(msg, cor = 0):
-    tam = len(msg)+3                #Definição do tamanho do titúlo
+    tam = len(msg)+5                #Definição do tamanho do titúlo
     print(cores[cor],end='')        #Inicio da Cor escolhida
     print('~' * tam)                #Sequencia de ~ antes titulo
-    print(f'   {msg}')              #Título Formatado
+    print(f'     {msg}')            #Título Formatado
     print('~' * tam)                #Sequencia de ~ após titulo
     print(cores[0],end='')          #Fim da Cor escolhida
 
