@@ -22,4 +22,3 @@ def metade(valor):
     calculo = valor / 2
     novoValor = round(calculo,2)
     return novoValor
-print('dee')
