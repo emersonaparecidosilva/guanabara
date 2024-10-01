@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+.eggs/
+lib/
+lib64/
+eggs/
+MANIFEST
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.env/
+.venv/
+venv.bak/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python testing
+.coverage
+.coverage.*
+nosetests.xml
+test.xml
+trial.xml
+coverage.xml
+*.cover
+
+# Pytest
+.cache
+.pytest_cache/
+
+# Pyre type checker
+.pyre/
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# mypy
+.mypy_cache/
+.pytype/
+
+# Type information
+.typing/
