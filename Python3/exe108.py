@@ -1,5 +1,16 @@
-#exercicio 108 - Tema XYZ
+#Exercício Python #108 - Formatando Moedas em Python
 
-print(('==*==')*20)
-print('Bem vindo(a) - Tema XYZ')
-print(('==*==')*20)
+import sys,os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'modulos'))) # Adiciona a pasta 'modulos' ao sys.path
+
+from moedas import aumentar,diminuir,dobro,metade,moeda
+from helpers import título
+
+título('Treinamento de Módulos',2)
+num = int(input('Digite o preço: R$ '))
+
+print(f'A metade de {moeda(num)} é {moeda(metade(num))}.')
+print(f'O dobro de {moeda(num)} é {moeda(dobro(num))}.')
+print(f'Aumentando 10% de {moeda(num)} é {moeda(aumentar(num,10))}.')
+print(f'Diminuindo 10% de {moeda(num)} é {moeda(diminuir(num,10))}.')
+

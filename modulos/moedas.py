@@ -22,3 +22,8 @@ def metade(valor):
     calculo = valor / 2
     novoValor = round(calculo,2)
     return novoValor
+
+def moeda(valor=0,pais='R$'):
+    return f'{pais}{valor:.2f}'.replace('.',',')
+
+# print(moeda(20,'USS ')) #Exemplo Implementação Moeda
