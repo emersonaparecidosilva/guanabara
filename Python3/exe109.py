@@ -7,6 +7,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'm
 from moedas import aumentar,diminuir,dobro,metade,moeda,resumo
 from helpers import título
 
-título(' Formatando Moedas em Python - Continuação',2)
+título(' Formatando Moedas em Python - Continuação - Opção Moeda',2)
 num = float(input('Digite o preço: R$ '))
-resumo(num,80,35)
+
+print(f'A metade de {moeda(num)} é {metade(num,True)}.')
+print(f'O dobro de {moeda(num)} é {dobro(num,True)}.')
+print(f'Aumentando 10% de {moeda(num)} é {aumentar(num,10,True)}.')
+print(f'Diminuindo 10% de {moeda(num)} é {diminuir(num,13,True)}.')

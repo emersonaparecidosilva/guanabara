@@ -6,8 +6,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'm
 from moedas import aumentar,diminuir,dobro,metade,moeda
 from helpers import título
 
-título('Treinamento de Módulos',2)
-num = int(input('Digite o preço: R$ '))
+título('Formatando Moedas - Colocando a vírgula',2)
+num = float(input('Digite o preço: R$ '))
 
 print(f'A metade de {moeda(num)} é {moeda(metade(num))}.')
 print(f'O dobro de {moeda(num)} é {moeda(dobro(num))}.')
