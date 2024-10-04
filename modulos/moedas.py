@@ -35,7 +35,16 @@ def resumo(valor,aumenta,diminui):
     print(f'{aumenta}% de Aumento: \t{aumentar(valor,aumenta,True)}')
     print(f'{diminui}% de Redução: \t{diminuir(valor,diminui,True)}')
     print('-'*40)
-    
 
+def leiaDinheiro(msg):
+    válido = False
+    while not válido:
+        entrada = str(input(msg)).replace(',','.')
+        if entrada.isalpha() or entrada.strip() == '':
+            print(f'\033[0;30;41mErro: \"{entrada}\" é um número inválido\033[m')
+        else:
+            válido = True
+            return float(entrada)
+        
 # print(moeda(20,'USS ')) #Exemplo Implementação Moeda
 # resumo(200,10,20) #Exemplo Implementação Resumo

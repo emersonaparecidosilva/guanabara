@@ -15,6 +15,29 @@ def título(msg, cor = 0):
     print('~' * tam)                #Sequencia de ~ após titulo
     print(cores[0],end='')          #Fim da Cor escolhida
 
-
 #Implementação de Exemplo
 # título('Exercício Python #107 - Exercitando módulos em Python',3)
+
+def leiaDinheiro(msg):
+    válido = False
+    while not válido:
+        entrada = str(input(msg)).replace(',','.')
+        if entrada.isalpha() or entrada.strip() == '':
+            print(f'\033[0;30;41mErro: \"{entrada}\" é um número inválido\033[m')
+        else:
+            válido = True
+            return float(entrada)
+
+def leiaint(msg):
+    ok = False
+    valor = 0
+    while True:
+        n = input(msg)
+        if n.isnumeric():
+            valor = int(n)
+            ok = True
+        else:
+            print(f'\33[0;31mERRO! Digite um número inteiro válido.\33[m')
+        if ok:
+            break
+    return valor
